@@ -1,0 +1,27 @@
+{
+    "name": "lazy-creator",
+    "version": "1.0.0",
+    "description": "A custom file generator based on node.js, which can realize the standardized development of project structure through custom file generation, eliminate unnecessary repetitive work and improve efficiency.",
+    "main": "index.js",
+    "scripts": {
+        "test": "test"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/gikhub-HYT/lazy-creator.git"
+    },
+    "keywords": [
+        "lazy",
+        "creator",
+        "lazy-creator"
+    ],
+    "author": "yongtian.hong",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/gikhub-HYT/lazy-creator/issues"
+    },
+    "homepage": "https://github.com/gikhub-HYT/lazy-creator#readme",
+    "dependencies": {
+        "chalk": "^2.4.2"
+    }
+}
