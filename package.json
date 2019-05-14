@@ -4,7 +4,12 @@
     "description": "A custom file generator based on node.js, which can realize the standardized development of project structure through custom file generation, eliminate unnecessary repetitive work and improve efficiency.",
     "main": "index.js",
     "scripts": {
-        "test": "test"
+        "test": "test",
+        "new:Page": "node ./Examples/templates/page/index.js",
+        "new:Module": "node ./Examples/templates/module/index.js",
+        "new:Store": "node ./Examples/templates/store/index.js",
+        "new:Component": "node ./Examples/templates/component/index.js",
+        "new:i18n": "node ./Examples/templates/i18n/index.js"
     },
     "repository": {
         "type": "git",
