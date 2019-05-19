@@ -1,5 +1,6 @@
 # lazy-creator
-一个基于node.js的自定义文件生成器，可以通过自定义文件生成实现项目结构规范化开发，消除不必要的重复性劳动，提升效率
+一个基于node.js的自定义文件生成器，可以根据预设的项目规范自定义文件模板生成文件，消除不必要的重复性劳动，提升效率，
+同时可以实现团队规范与项目结构的一致性
 
  ![display](https://images.gitee.com/uploads/images/2019/0519/132819_9f71d979_1384885.gif "gitee.gif")
 
@@ -52,7 +53,21 @@ const storeTemplate={
          actions: actions,
          getter: getter
       }`
-  },
+  };
+
+const i18nTemplate={
+    'en_US.js': "export default {}",
+    'zh_CN.js': "export default {}",
+    'zh_TW.js': "export default {}",
+    'index.js': `import en_us from './en_US';
+    import zh_cn from './zh_CN';
+    import zh_tw from './zh_TW';
+    export default{
+        en_US:en_us,
+        zh_CN:zh_cn,
+        zh_TW:zh_tw
+    }`
+};
 
 
 const VueTemplate = function(compoenntName) {
@@ -86,6 +101,9 @@ lazyCreator
 
         ctx.generateFiles(storePath, storeTemplate);
         ctx.log.success(`store创建成功！`)
+            
+        ctx.generateFiles(i18nPath, i18nTemplate);
+        ctx.log.success(`i18n创建成功！`)        
 
     })
 ```
